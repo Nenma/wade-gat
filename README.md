@@ -6,4 +6,5 @@ Develop a Web tool (framework) using natural language constructs to interact to 
 1. Roșu Cristian-Mihai (team leader)
 2. Lupancu Viorica-Camelia
 
+Web Application Development course
 Computational Linguistics Master, first year
