@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
+    <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <h1>GAT - Scholarly HTML Technical Report</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+            Roșu Cristian-Mihai & Lupancu Viorica-Camelia
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        This paper is a technical report describing the preliminary considerations about the internal data structures and models to be used and the external data sources managed by 
+        the <a href="#gat">GAT Web application</a>.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introduction</h2>
+      <p>
+        GAT, or the <a href="#graphql">GraphQL API</a> Interactive Tool, is meant to be a tool that uses knowledge models to learn the proper concepts exposed by a public GraphQL API's schema (e.g. resources, their 
+        inputs and outputs) to facilitate a proper text- or voice-based interaction.
+      </p>
+      <p>
+        As a preliminary idea, the application will be divided in three main modules, following a service oriented architecture:
+        
+        <ul>
+            <li>Web application UI</li>
+            <li>NLP Module</li>
+            <li>GraphQL API Explorer Module</li>
+        </ul>
+
+        In the following sections, the basic structure and functionality of each of these modules will be described.
+      </p>
+    </section>
+    <section id="structure">
+      <h2>Preliminary structure</h2>
+      <p>
+        The project will be divided in three main modules, each intended to work independently as a service, that will communicate with each other via REST APIs and a database.
+      </p>
+
+      <section id="ui">
+        <h3>Web application UI</h3>
+        <p>
+            The main interface through which the text-based interaction between a user and the application will take place is a simple web application. This web interface is intended
+            to have a very simple and clean UI that keeps the exchange as minimal and meaningful as possible. The user should not have to register for an account and the only input needed,
+            apart from the questions themselves, should be the GraphQL API URL that needs to be explored by the application in order to be ready to answer the respective questions.
+        </p>
+        <p>
+            Upon opening the web application, the user will be greeted by a home page that shortly summarizes the tool's purpose and utility and that will also present the user with an input
+            field that expects to receive a valid GraphQL API URL. Only after this has been supplied, the user will be redirected to a new page that will allow for communication with the tool
+            in a chat-like manner. From here, a continuous exchange of questions by the user and answers by the tool should follow uninterrupted unless stopped by the user.
+        </p>
+        <p>
+            This communication is mainly handled by the NLP module and is carried out using a REST API.
+        </p>
+      </section>
+
+        <section id="nlp">
+            <h3>NLP Module</h3>
+            <p>
+                The purpose of this module is to serve as part of the Question Answering System behind the tool's communication logic. As mentioned, a REST API ensures data transmission between user and
+                application. For this module, the REST API uses two endpoints:
+
+                <ul>
+                    <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitURL</pre></figure></li>
+                    <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitQuestion</pre></figure></li>
+                </ul>
+
+                The first endpoint is only meant to be used to receive the URL that was sent in the input field of the home page and later send it to the Explorer module, while the second endpoint
+                is exclusively used for user communication. The body of this request carries the user question and as its response it will bring an answer back to the user.
+            </p>
+            <p>
+                <a href="#qas">Question Answering Systems</a> (QAS) try to find answers to natural language questions submitted by users, by looking for answers on a set of available information
+                sources, which can be spread on a single machine or all over the Internet. Broadly speaking, QAS have two major components:
+
+                <ol>
+                    <li>A search engine which retrieves a set of promising documents from the collection along with a brief description of relevant passages called snippets.</li>
+                    <li>An answer extraction module which gets answers from relevant documents and/or snippets.</li>
+                </ol>
+
+                In our case, the first component is represented by the Explorer module, while the second component is represented by this one.
+            </p>
+            <p>
+                The trend of QAS is to start by analyzing the query, in order to select an adequate strategy for answering the question. This initial phase is called Query Analysis. There are 
+                different approaches to Query Analysis, but in most cases it aims for determining the Expected Answer Type (EAT). At this primary step, the answer is assigned to one of a set of 
+                distinct and separate categories, and this categorization constrains and guides the whole answering process. The number of categories vary from approach to approach.
+            </p>
+            <p>
+                This module is meant to follow these steps, but with the difference being that our information source is much more structured than what would otherwise be found using a search engine
+                or any normal method, and thus determining the EAT should prove to be a task achievable with a higher degree of certainty. This information source is represented by our database 
+                which contains structured information provided by the Explorer module regarding the domain and notions specific to the desired public GraphQL API.
+            </p>
+        </section>
+
+        <section id="explorer">
+            <h3>GraphQL API Explorer Module</h3>
+            <p>
+                As mentioned in the previous section, this module serves as the first component of the tool's Question Answering System (QAS) which deals with information retrieval. In our case,
+                this module's purpose is to infer the internal structure of the queries and types used by the provided public GraphQL API.
+            </p>
+            <p>
+                The URL of this API is obtained through a REST API endpoint, <code>POST /submitEndpoint</code>, that is being called in the NLP module after receiving it from the user.
+            </p>
+            <p>
+                GraphQL <a href="#introspec">introspection</a> makes it possible to query which resources are available in the current API schema. Via this capability, the queries, types, fields, and directives 
+                that the API supports can be observed. The introspection system defines <code>__Schema</code>, <code>__Type</code>, <code>__TypeKind</code>, <code>__Field</code>, 
+                <code>__InputValue</code>, <code>__EnumValue</code>, and <code>__Directive</code> which are introspective queries. These are preceded by two underscores which are exclusively 
+                used by GraphQL’s introspection system.
+            </p>
+            <p>
+                This module will make use of this capability to create custom data types for the objects that will store the API query information that will later be stored in the database for the
+                NLP module to use.
+            </p>
+        </section>
+    </section>
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+          The three modules presented above should work individually, but together they will make up the preliminary structure of the text-based interaction of project GAT.
+      </p>
+      <p>
+          As this is supposed to be a web application, the <a href="#linked-data">linked data principles</a> are upheld since the only structured data being transmitted
+          is done through the internal REST APIs via POST requests, only on of which returns response data that more than conforms to these principles.
+      </p>
+    </section>
+    <section id="references">
+        <h2>References</h2>
+        <ol>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://profs.info.uaic.ro/~busaco/teach/courses/wade/projects/index.html" id="gat">
+                <cite property="schema:name">
+                    <a href="https://profs.info.uaic.ro/~busaco/teach/courses/wade/projects/index.html">#WADe Project Proposals</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://w3c.github.io/scholarly-html/">
+                <cite property="schema:name">
+                    <a href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://graphql.org/" id="graphql">
+                <cite property="schema:name">
+                    <a href="https://graphql.org/">graphql.org</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.researchgate.net/publication/271911238_Genetic_Algorithms_for_syntactic_and_data-driven_Question_Answering_on_the_Web" property="schema:citation" id="qas">
+                <cite property="schema:name">
+                    <a href="https://www.researchgate.net/publication/271911238_Genetic_Algorithms_for_syntactic_and_data-driven_Question_Answering_on_the_Web">Genetic Algorithm for Syntactic and Data Driven Question Answering on the Web</a>
+                </cite>
+                , by
+                <span property="schema:author" typeof="schema:Person">
+                    <span property="schema:givenName">Alejandro</span>
+                    <span property="schema:familyName">Figueroa</span>
+                </span>
+                ; published in
+                <time property="schema:datePublished" datatype="xsd:gYear" datetime="2016">2016</time>
+                <span property="schema:potentialAction" typeof="schema:ReadAction">
+                    <meta property="schema:actionStatus" content="CompletedActionStatus">
+                </span>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://graphql.org/learn/introspection/" id="introspec">
+                <cite property="schema:name">
+                    <a href="https://graphql.org/learn/introspection/">GraphQL Introspection</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.w3.org/wiki/LinkedData" id="linked-data">
+                <cite property="schema:name">
+                    <a href="https://www.w3.org/wiki/LinkedData">LinkedData Principles</a>
+                </cite>
+            </li>
+        </ol>
+    </section>
+  </body>
+</html>
