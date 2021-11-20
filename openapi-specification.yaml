@@ -1,0 +1,91 @@
+openapi: 3.0.1
+info:
+  title: GAT - GraphQL API Interactive Tool
+  description: >-
+    OpenAPI specification of the APIs working behind the GAT (GraphQL API Interactive Tool) project of the WADe course.
+  license:
+    name: Apache-2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+  version: 1.0.0
+externalDocs:
+  description: GitHub repository
+  url: 'https://github.com/Nenma/wade-gat'
+paths:
+  '/submitEndpoint':
+    post:
+      summary: Submit public GraphQL API endpoint.
+      tags: 
+        - https://api.explorer/
+      description: Sends GraphQL API endpoint to the Explorer module.
+      requestBody:
+        description: The URL to be sent.
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - url
+              type: object
+              properties:
+                url:
+                  type: string
+      responses:
+        '200':
+          description: URL successfully sent.
+        '400':
+          description: URL couldn't be sent.
+  '/submitURL':
+    post:
+      summary: Submit public GraphQL API endpoint.
+      tags: 
+        - https://api.chat/
+      description: Sends GraphQL API endpoint to NLP module, later sending it to the Explorer module.
+      requestBody:
+        description: The URL to be sent.
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - url
+              type: object
+              properties:
+                url:
+                  type: string
+      responses:
+        '200':
+          description: URL successfully sent.
+        '400':
+          description: URL couldn't be sent.
+  '/submitQuestion':
+      post:
+        summary: Submit question relative to previously submitted API.
+        tags: 
+          - https://api.chat/
+        description: Sends question to NLP module and gives answer back.
+        requestBody:
+          description: The question to be asked.
+          required: true
+          content:
+            application/json:
+              schema:
+                required:
+                  - question
+                type: object
+                properties:
+                  question:
+                    type: string
+        responses:
+          '200':
+            description: Answer to the question.
+            content:
+              application/json:
+                schema:
+                  required:
+                    - answer
+                  type: object
+                  properties:
+                    answer:
+                      type: string
+          '400':
+            description: Question couldn't be sent.
