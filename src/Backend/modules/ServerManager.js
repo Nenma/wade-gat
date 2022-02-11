@@ -1,19 +1,9 @@
 var express = require('express');
-const path = require('path');
 const fileUpload = require('express-fileupload');
 const cors = require('cors')
-const uuid = require('uuid')
 const bodyParser = require("body-parser");;
-var expressPooling = require("express-longpoll")
 const ConnectorService = require("./ConnectorService");
-
-// const SecurityMiddleware = require("../monitoring/SecurityMiddleware");
-const OpinionModule = require("../opinionModules/opinionSeeds");
-// const { securityMiddleware, originMiddleware, middlewareResolver } = SecurityMiddleware;
-
-const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
-
-// const middleware = middlewareResolver(pipe(securityMiddleware, originMiddleware));
+const OpinionModule = require("../otherModules/NLPmoduleCalling");
 
 class ServerManager{
 

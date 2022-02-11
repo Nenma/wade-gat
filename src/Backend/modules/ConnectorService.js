@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-var idr = require('./InputDataReceiver');
 const { FILE } = require('dns');
 
 function writeAPIandQuestion (data, filename) {

@@ -1,5 +1,5 @@
 {
-  "name": "structured-sentiment-analysis",
+  "name": "wade-gat",
   "version": "1.0.0",
   "description": "Project",
   "main": "index.js",
@@ -9,15 +9,12 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
-    "express-longpoll": "0.0.6",
     "jest": "^27.4.5",
-    "node-wordnet": "^0.1.12",
     "rimraf": "^3.0.2",
     "save-dev": "0.0.1-security",
     "start": "^5.1.0",
     "uuid": "^8.3.2",
-    "wndb-with-exceptions": "^3.0.2",
-    "wordnet-db": "^3.1.14"
+    "wndb-with-exceptions": "^3.0.2"
   },
   "devDependencies": {
     "http-server": "^14.0.0",
@@ -35,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FuNNNk/Structured-Sentiment-Analysis.git"
+    "url": "git+https://github.com/Nenma/wade-gat.git"  
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FuNNNk/Structured-Sentiment-Analysis/issues"
+    "url": "https://github.com/Nenma/wade-gat/issues"
   },
   "jest": {
     "rootDir": "./",
@@ -56,5 +53,5 @@
       "**/__tests__/**/*.+(ts|tsx|js)"
     ]
   },
-  "homepage": "https://github.com/FuNNNk/Structured-Sentiment-Analysis#readme"
+  "homepage": "https://github.com/Nenma/wade-gat#readme"
 }
