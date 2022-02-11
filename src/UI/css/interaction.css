@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #BDB76B;
+    font-family: 'Poppins';
+}
+
+.circle{
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    background: #B8B050;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.image{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.gat-title{
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+}
+
+.gat-title .title{
+    height: 50px;
+    width: 542px;
+    font-family: 'Righteous';
+    font-weight: bold; 
+    font-size: 1.7em;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin-left: 110px;
+    margin-top: 50px;
+}
+
+.interaction{
+    display: flex;
+    margin-top: 130px;
+}
+
+.col-1, .col-2{
+    flex: 50%;
+}
+
+.input-title{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-input{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    resize: none;
+    width: 90%;
+    height: 20px;
+    background-color: #E9E9E9;
+    border: none; 
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.send-btn, .generate-btn, .get-btn, .response-btn{
+    justify-content: flex-end;
+    margin-top: 40px;
+    /* justify-content: left; */
+    /* justify-content: center; */
+    border: none;
+    border-radius: 0.5em;
+    background-color: #E9E9E9;
+    color: black;
+    font-size: 1em;
+    text-align: center;
+    line-height: 10px;
+    height: 45px;
+}
+
+.generate-btn{
+    width: 200px;
+    margin-left: 110px;
+}
+.get-btn{
+    width: 200px;
+    margin-left: 70px;
+}
+
+.send-btn, .response-btn{
+    width: 150px;
+    margin-left: 70px;
+}
+
+button:hover{
+    background-color: #B8B050;
+    box-shadow: 0 -4px 0 0 #E9E9E9;
+    color: #E9E9E9;
+}
+
+.results-area{
+    height: 20px;
+    width: 100%;
+    margin: auto;
+    margin-top: 51px;
+    margin-left: 20px;
+    display: flex;
+} 
+
+.results-area pre{
+    height: 100%;
+    border: 1px solid #E9E9E9;
+}
+
+.prediction, .response{
+    flex: 50%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+pre{
+    resize: none;
+    width: 90%;
+    height: 20px;
+    background-color: #E9E9E9;
+    color: black;
+    border: none; 
+    padding: 1em;
+    border-radius: 1em;
+}
