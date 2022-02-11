@@ -1,0 +1,1690 @@
+{
+    "types": [
+        {
+            "kind": "OBJECT",
+            "name": "Job",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "title",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "commitment",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Commitment",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "cities",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "CityWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CityOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "City",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "countries",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "CountryWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CountryOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Country",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "remotes",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "RemoteWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "RemoteOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Remote",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "description",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "applyUrl",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "company",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Company",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "tags",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "TagWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "TagOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Tag",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isPublished",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Boolean",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isFeatured",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Boolean",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "locationNames",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "userEmail",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "postedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Location",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "City",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "country",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Country",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "jobs",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "JobWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "JobOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Job",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Country",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isoCode",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "cities",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "CityWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CityOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "City",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "jobs",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "JobWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "JobOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Job",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Remote",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "jobs",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "JobWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "JobOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Job",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Commitment",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "title",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "jobs",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "JobWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "JobOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Job",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Company",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "slug",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "websiteUrl",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "logoUrl",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "jobs",
+                    "args": [
+                        {
+                            "name": "where",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "JobWhereInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "orderBy",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "JobOrderByInput",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "skip",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Job",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "twitter",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "emailed",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Boolean",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "createdAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "updatedAt",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "DateTime",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        }
+    ],
+    "arguments": [
+        {
+            "name": "input",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "JobsInput",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "input",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "JobInput",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "input",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "LocationsInput",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "input",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "LocationInput",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        }
+    ]
+}

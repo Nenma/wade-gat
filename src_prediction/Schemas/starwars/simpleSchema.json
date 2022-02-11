@@ -1,0 +1,1941 @@
+{
+    "types": [
+        {
+            "kind": "OBJECT",
+            "name": "Film",
+            "fields": [
+                {
+                    "name": "title",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "episodeID",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "openingCrawl",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "director",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "producers",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "releaseDate",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "speciesConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "FilmSpeciesConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "starshipConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "FilmStarshipsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "vehicleConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "FilmVehiclesConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "characterConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "FilmCharactersConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "planetConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "FilmPlanetsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Person",
+            "fields": [
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "birthYear",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "eyeColor",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "gender",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "hairColor",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "height",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "mass",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "skinColor",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "homeworld",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Planet",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "filmConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "PersonFilmsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "species",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Species",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "starshipConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "PersonStarshipsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "vehicleConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "PersonVehiclesConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Planet",
+            "fields": [
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "diameter",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "rotationPeriod",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "orbitalPeriod",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "gravity",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "population",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "climates",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "terrains",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "surfaceWater",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "residentConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "PlanetResidentsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "filmConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "PlanetFilmsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Species",
+            "fields": [
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "classification",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "designation",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "averageHeight",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "averageLifespan",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "eyeColors",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "hairColors",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "skinColors",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "language",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "homeworld",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Planet",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "personConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "SpeciesPeopleConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "filmConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "SpeciesFilmsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Starship",
+            "fields": [
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "model",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "starshipClass",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "manufacturers",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "costInCredits",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "length",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "crew",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "passengers",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "maxAtmospheringSpeed",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "hyperdriveRating",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "MGLT",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "cargoCapacity",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "consumables",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "pilotConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "StarshipPilotsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "filmConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "StarshipFilmsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Vehicle",
+            "fields": [
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "model",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "vehicleClass",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "manufacturers",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "costInCredits",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "length",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "crew",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "passengers",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "maxAtmospheringSpeed",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "cargoCapacity",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Float",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "consumables",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "pilotConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "VehiclePilotsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "filmConnection",
+                    "args": [
+                        {
+                            "name": "after",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "first",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "before",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "last",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int",
+                                "ofType": null
+                            },
+                            "defaultValue": null
+                        }
+                    ],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "VehicleFilmsConnection",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "edited",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [
+                {
+                    "kind": "INTERFACE",
+                    "name": "Node",
+                    "ofType": null
+                }
+            ],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "INTERFACE",
+            "name": "Node",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": null,
+            "enumValues": null,
+            "possibleTypes": [
+                {
+                    "kind": "OBJECT",
+                    "name": "Film",
+                    "ofType": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Species",
+                    "ofType": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Planet",
+                    "ofType": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Person",
+                    "ofType": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Starship",
+                    "ofType": null
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Vehicle",
+                    "ofType": null
+                }
+            ]
+        }
+    ],
+    "arguments": [
+        {
+            "name": "after",
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "first",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "before",
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "last",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "id",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filmID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "personID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "planetID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "speciesID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "starshipID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "vehicleID",
+            "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "id",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        }
+    ]
+}

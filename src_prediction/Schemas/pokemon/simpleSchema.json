@@ -1,0 +1,1678 @@
+{
+    "types": [
+        {
+            "kind": "OBJECT",
+            "name": "Ability",
+            "fields": [
+                {
+                    "name": "key",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "AbilitiesEnum",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "bulbapediaPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "desc",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isFieldAbility",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "serebiiPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shortDesc",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "smogonPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Pokemon",
+            "fields": [
+                {
+                    "name": "key",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "PokemonEnum",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "abilities",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Abilities",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "backSprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "baseForme",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "baseSpecies",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "baseStats",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Stats",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "baseStatsTotal",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "bulbapediaPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "catchRate",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "CatchRate",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "color",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "cosmeticFormes",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "eggGroups",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "evolutionLevel",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "evolutions",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Pokemon",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "evYields",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "EvYields",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "flavorTexts",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Flavor",
+                                    "ofType": null
+                                }
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "forme",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "formeLetter",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "gender",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Gender",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "height",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Float",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isEggObtainable",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Boolean",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "levellingRate",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "maximumHatchTime",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "minimumHatchTime",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "num",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "otherFormes",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "SCALAR",
+                                "name": "String",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "preevolutions",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Pokemon",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "serebiiPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shinyBackSprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shinySprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "smogonPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "smogonTier",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "species",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "sprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "types",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String",
+                                    "ofType": null
+                                }
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "weight",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Float",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Item",
+            "fields": [
+                {
+                    "name": "key",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "ItemsEnum",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "bulbapediaPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "desc",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "generationIntroduced",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isNonstandard",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "serebiiPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shortDesc",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "smogonPage",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "sprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Learnset",
+            "fields": [
+                {
+                    "name": "backSprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "color",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "dreamworldMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "eggMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "eventMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "levelUpMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetLevelUpMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "pokemonKey",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "PokemonEnum",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "num",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shinyBackSprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shinySprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "species",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "sprite",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "tmMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "tutorMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "virtualTransferMoves",
+                    "args": [],
+                    "type": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "NON_NULL",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "LearnsetMove",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Move",
+            "fields": [
+                {
+                    "name": "key",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "MovesEnum",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "accuracy",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "basePower",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "bulbapediaPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "category",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "contestType",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "desc",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isFieldMove",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isGMax",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isNonstandard",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "isZ",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "maxMovePower",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "pp",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "priority",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "serebiiPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "shortDesc",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "smogonPage",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "target",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "zMovePower",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Int",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "TypeMatchup",
+            "fields": [
+                {
+                    "name": "attacking",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Type",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "defending",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Type",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        }
+    ],
+    "arguments": [
+        {
+            "name": "ability",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "ENUM",
+                    "name": "AbilitiesEnum",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "offset",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": "0"
+        },
+        {
+            "name": "take",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": "1"
+        },
+        {
+            "name": "reverse",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+            },
+            "defaultValue": "false"
+        },
+        {
+            "name": "ability",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "offsetFlavorTexts",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": "0"
+        },
+        {
+            "name": "takeFlavorTexts",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": "1"
+        },
+        {
+            "name": "reverseFlavorTexts",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+            },
+            "defaultValue": "true"
+        },
+        {
+            "name": "number",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "pokemon",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "ENUM",
+                    "name": "PokemonEnum",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "pokemon",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "take",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": "963"
+        },
+        {
+            "name": "item",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "ENUM",
+                    "name": "ItemsEnum",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "item",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "generation",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "moves",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "MovesEnum",
+                            "ofType": null
+                        }
+                    }
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "moves",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    }
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "move",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "ENUM",
+                    "name": "MovesEnum",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "move",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "types",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "ENUM",
+                            "name": "TypesEnum",
+                            "ofType": null
+                        }
+                    }
+                }
+            },
+            "defaultValue": null
+        }
+    ]
+}

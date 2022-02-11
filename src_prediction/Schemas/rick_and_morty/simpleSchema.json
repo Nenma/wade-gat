@@ -1,0 +1,383 @@
+{
+    "types": [
+        {
+            "kind": "OBJECT",
+            "name": "Character",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "ID",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "status",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "species",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "gender",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "origin",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Location",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "location",
+                    "args": [],
+                    "type": {
+                        "kind": "OBJECT",
+                        "name": "Location",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "image",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "episode",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Episode",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Location",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "ID",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "type",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "dimension",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "residents",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Character",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Episode",
+            "fields": [
+                {
+                    "name": "id",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "ID",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "air_date",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "episode",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "characters",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "OBJECT",
+                                "name": "Character",
+                                "ofType": null
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "created",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        }
+    ],
+    "arguments": [
+        {
+            "name": "id",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "page",
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "FilterCharacter",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "ids",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    }
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "FilterLocation",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "FilterEpisode",
+                "ofType": null
+            },
+            "defaultValue": null
+        }
+    ]
+}

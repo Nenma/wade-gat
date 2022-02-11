@@ -1,0 +1,354 @@
+{
+    "types": [
+        {
+            "kind": "OBJECT",
+            "name": "Continent",
+            "fields": [
+                {
+                    "name": "code",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "countries",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Country",
+                                    "ofType": null
+                                }
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Country",
+            "fields": [
+                {
+                    "name": "code",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "native",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "phone",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "continent",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "OBJECT",
+                            "name": "Continent",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "capital",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "currency",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "languages",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Language",
+                                    "ofType": null
+                                }
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "emoji",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "emojiU",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "String",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "states",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "LIST",
+                            "name": null,
+                            "ofType": {
+                                "kind": "NON_NULL",
+                                "name": null,
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "State",
+                                    "ofType": null
+                                }
+                            }
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        },
+        {
+            "kind": "OBJECT",
+            "name": "Language",
+            "fields": [
+                {
+                    "name": "code",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "ID",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "name",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "native",
+                    "args": [],
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                },
+                {
+                    "name": "rtl",
+                    "args": [],
+                    "type": {
+                        "kind": "NON_NULL",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Boolean",
+                            "ofType": null
+                        }
+                    },
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                }
+            ],
+            "inputFields": null,
+            "interfaces": [],
+            "enumValues": null,
+            "possibleTypes": null
+        }
+    ],
+    "arguments": [
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "ContinentFilterInput",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "code",
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                }
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "CountryFilterInput",
+                "ofType": null
+            },
+            "defaultValue": null
+        },
+        {
+            "name": "filter",
+            "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "LanguageFilterInput",
+                "ofType": null
+            },
+            "defaultValue": null
+        }
+    ]
+}
