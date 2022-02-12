@@ -3,7 +3,7 @@ import json
 from functools import reduce
 
 from t5_multi_sp_model import T5MultiSPModel
-from transform_sql_to_graphql import convert
+from util import convert
 
 torch.manual_seed(0)
 
