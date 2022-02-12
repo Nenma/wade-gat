@@ -1,0 +1,4 @@
+{
+    "query": "query { Continent(name: \"OC\") { name } }",
+    "graphql_api_url": "http://countries.trevorblades.com/"
+}

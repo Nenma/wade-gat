@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>GraphQL API Interactive Tool</title>
+  <link rel="stylesheet" href="./css/interaction.css">
+  
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <span class="circle"></span>
+
+    <img class="image" src="./images/chat_logo.png" alt="Chat logo">
+
+    <div class="gat-title">
+      <p class="title"> GraphQL API Interactive Tool </p>
+    </div>
+
+    <div class="interaction">
+        <div class="col-1">
+            <div class="api-url">
+                <p class="input-title" id="api-label"> A public GraphQL API </p>
+                <div class="text-input">
+                  <textarea id="api" type="text" placeholder="Input a GraphQL API URL here..."></textarea> 
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-2">
+            <div class="input-question">
+                <p class="input-title" id="input-label"> Enter your question to query the GraphQL API </p>
+                <div class="text-input">
+                  <textarea id="question" type="text" placeholder="Input your text here..."></textarea> 
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="btns">
+        <button class="generate-btn" id="prepare-schema-btn">1. Prepare GraphQL schema</button>
+        <button class="get-btn" id="get-query-btn">2. Display predicted query</button>
+        <button class="send-btn" id="send-query-btn">3. Send query</button>
+        <button class="response-btn" id="get-response-btn">4. Dispay response</button>
+    </div>
+
+    <div class="results-area">
+        <div class="prediction">
+            <h2 id="prediction-label">Predicted query:</h2>
+            <pre id="predicted-query"></pre>
+        </div>
+
+        <div class="response">
+            <h2>GraphQL response:</h2>
+            <pre id="response-query"></pre>
+        </div>
+    </div>
+
+  </div> 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/index.js"></script>
+ 
+</body>
+
+</html>
