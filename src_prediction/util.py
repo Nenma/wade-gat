@@ -2,6 +2,7 @@ import json
 import re
 import os
 import requests
+import copy
 
 
 # TODO: to be improved
@@ -13,7 +14,9 @@ def convert(prediction):
     condition_string = ''
     # Check whether WHERE clause is present
     if condition != '':
-        condition_string = '(' + condition.replace(' =', ':') + ')'
+        condition = condition.replace(' =', ':')
+        condition = condition.replace("'", '\"')
+        condition_string = '(' + condition + ')'
 
     
     return 'query { ' + query_type + condition_string + ' { ' + fields + ' } }'
@@ -36,7 +39,9 @@ def get_query_types_with_fields(query_types, name_to_type):
                 or 'getfuzzy' + key.lower() + 's' == field['name'].lower() \
                 or 'getfuzzy' + key.lower()[:-1] + 'ies' == field['name'].lower() \
                 or key.lower() in field['name'].lower():
-                    query_and_fields.append(value)
+                    value_copy = copy.copy(value)
+                    value_copy['name'] = field['name']
+                    query_and_fields.append(value_copy)
 
     return query_and_fields
 
