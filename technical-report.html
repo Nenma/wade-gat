@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Scholarly HTML</title>
+    <title>GAT - Scholarly HTML Technical Report</title>
     <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
     <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
   </head>
@@ -15,7 +15,7 @@
       <dl>
         <dt>Authors</dt>
         <dd>
-            Roșu Cristian-Mihai & Lupancu Viorica-Camelia
+            Roșu Cristian-Mihai & Lupancu Viorica-Camelia, students at FII MLC1
         </dd>
       </dl>
     </div>
@@ -27,7 +27,6 @@
       </p>
     </section>
     <section id="introduction" role="doc-introduction">
-      <!-- review? -->
       <h2>Introduction</h2>
       <p>
         GAT, or the <a href="#graphql">GraphQL API</a> Interactive Tool, is meant to be a tool that uses knowledge models to learn the proper concepts exposed by a public GraphQL API's schema (e.g. resources, their 
@@ -126,14 +125,114 @@
             </p>
         </section>
     </section>
+    <section id="project-progress">
+        <h2>Project progress</h2>
+        <p>
+            Regarding the initial structure of the project, there have been changes along the way. In the following sections, the final application architecture, the requirements and final result will be presented. 
+        </p>
+
+        <section id="final-app-architecture">
+            <h2>Final application architecture with respect to the initial goals</h2>
+            <p>
+                The initial structure of the project involved a Question Answering System as the NLP module. Idea that turned out to be inappropriate to meet the requirements of the project, considering that in 
+                order to answer a question, a corpus was needed, when in fact only some GraphQL schemes were provided. Therefore, the NLP component is represented by a Semantic Parser.
+                Currently, the project structure contains the following modules:
+            </p>
+            <ul id="modules">
+                <li id="web-app">
+                    <h4>Web application</h4>
+                    <p>
+                        Regarding the user interface, there have also been some changes compared to the preliminary structure. So now all the data that the user must enter (a public GraphQL API URL and 
+                        the question/query for that GraphQL API) will be entered exclusively in the interaction page. Also, the tool-user communication does not take place in a chat-box manner, but through some 
+                        text input fields and some areas for displaying the results. As originally designed, the communication between the UI and the NLP module is carried out using a REST API.
+                    </p>
+                </li>
+                <!-- <li id="backend"> 
+                    <h4>Backend</h4>
+                </li> -->
+                <li id="nlp-explorer">
+                    <h4>Semantic parser and API explorer</h4>
+                    <p>
+                        In the final version of the application, the NLP component is represented by a semantic parser that converts a natural language question (written in English) into a GraphQL query.
+                    </p>
+                    <p>
+                        It all started with creating an English to GraphQL dataset, a series of GraphQL schemas and a series of {question, schema_name, query} tuples needed to train a model (in this case T5).
+                        Due to lack of data, too few valid public GraphQL APIs, we had to use an existing dataset. The only English to GraphQL dataset found is the one created by Andre Carerra for his project 
+                        "<a href="#parser-proj">Semantic Parsing English to GraphQL</a>". This cross domain English to GraphQL dataset, allowing for semantic parsing, consists of 160 schemas, 4.353 unique English questions
+                        and 2.472 unique GraphQL queries (compared to 8 schemas, 384 questions and queries which we managed to write). This dataset is created by transforming 160 SQL databases into GraphQL schemas.
+                    </p>
+                    <p>
+                        After getting this dataset, we managed to train a T5-small model, which is a NLP model implemented in Transformer library, using Python programming language. 
+                        Once we handled to train a model, it was possible to convert a natural language question into a SQL query. The query predicted by the model is an SQL one, because the GraphQL schema that we get 
+                        differs in structure from the ones that were used to train the model. In this situation, another step appeared, the transformation of an SQL query into a GraphQL query.
+                        This transformation is based on keywords such as SELECT, FROM, WHERE.
+                    </p>
+                    <p>
+                        The GraphQL API Explorer component is part of the same module. This component is meant to retrieve the schema (the internal structure of the queries and types) provided by the public GraphQL API.
+                        To get the schema we send a GraphQL introspection query (a HTTP request) to the GraphQL server endpoint asking for the GraphQL schema.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements</h2>
+            <ul>
+                <li>
+                    Software requirements:
+                    <ul>
+                        <li>Frontend: HTML, CSS, JavaScript</li>
+                        <li>Semantic parser and GraphQL API explorer: Python</li>
+                        <li>OpenAPI: Swagger</li>
+                    </ul>
+                </li>
+                <li> User requirements:
+                    <ul>
+                        <li>The user is able to enter a public GraphQL API URL along with a natural language question written in English and receive the GraphQL response to that question</li>
+                        <li>The user is able to enter a public GraphQL API URL along with a query for that GraphQL schema and receive the GraphQL response</li>
+                    </ul>
+                </li>
+                <li> Application requirements:
+                    <ul>
+                        <li>The application is able to predict an equivalent GraphQL query to a given natural language question written in English</li>
+                        <li>The application is able to send a request to a public GraphQL API</li>
+                        <li>The application is able to display a result related to the question/query received from the user</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="outcome">
+            <h2>Outcome</h2>
+            <p>
+                The current application is able to read the input from the user, process it and return relevant results. 
+            </p>
+        </section>
+    </section>
+    <section id="api">
+        <h2>Technical aspects concerning the implemented API</h2>
+        <p>
+            The data transmission between user and application is ensured by a REST API. This REST API uses four endpoints:
+            <ul>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /question</pre></figure></li>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /prediction</pre></figure></li>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /predictedQuery</pre></figure></li>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /response</pre></figure></li>
+            </ul>
+
+            The first endpoint is meant to receive the public GraphQL API URL along with the natural language question that were written in the input field of the interaction page and send them to the Semantic parser component.
+            The second endpoint is used for sending the predicted GraphQL query to the UI. The third endpoint is meant to receive the predicted query by the Semantic parser and send it to the Explorer component.
+            And the fourth endpoint is used to get the answer to the query from the Explorer and send it to the UI. 
+        </p>
+    </section>
     <section id="conclusion">
       <h2>Conclusion</h2>
       <p>
-          The three modules presented above should work individually, but together they will make up the preliminary structure of the text-based interaction of project GAT.
+          The modules presented above work individually, but together they make up the preliminary structure of the text-based interaction of project GAT.
       </p>
       <p>
-          As this is supposed to be a web application, the <a href="#linked-data">linked data principles</a> are upheld since the only structured data being transmitted
-          is done through the internal REST APIs via POST requests, only on of which returns response data that more than conforms to these principles.
+          As this is a web application, the <a href="#linked-data">linked data principles</a> are upheld since the only structured data being transmitted
+          is done through the internal REST APIs via GET requests, only on of which returns response data that more than conforms to these principles.
       </p>
     </section>
     <section id="references">
@@ -172,6 +271,11 @@
             <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://graphql.org/learn/introspection/" id="introspec">
                 <cite property="schema:name">
                     <a href="https://graphql.org/learn/introspection/">GraphQL Introspection</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://blog.lambdo.com/spegql-openai-scholars-final-project/" id="#parser-proj">
+                <cite property="schema:name">
+                    <a href="https://blog.lambdo.com/spegql-openai-scholars-final-project/">Semantic Parsing English to GraphQL Project</a>
                 </cite>
             </li>
             <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.w3.org/wiki/LinkedData" id="linked-data">
