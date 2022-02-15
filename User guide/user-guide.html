@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>GAT - Scholarly HTML User guide</title>
+    <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
+    <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
+  </head>
+
+  <body prefix="schema: http://schema.org">
+
+    <header>
+      <h1>GAT - Scholarly HTML User Guide</h1>
+      <h2>Table of Contents</h2>
+    </header>
+
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+            Roșu Cristian-Mihai & Lupancu Viorica-Camelia, students at FII MLC1
+        </dd>
+      </dl>
+    </div>
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        This paper is a user guide describing the <a href="#gat">GAT Web application</a> developed solution, showcasing the ways of interaction with the web application.
+      </p>
+    </section>
+
+    <section id="introduction" role="doc-introduction">
+      <h2>Introduction</h2>
+      <p>
+        GAT, or the <a href="#graphql">GraphQL API</a> Interactive Tool, is meant to be a tool that uses knowledge models to learn the proper concepts exposed by a public 
+        GraphQL API's schema (e.g. resources, their inputs and outputs) to facilitate a proper text- or voice-based interaction.
+      </p>
+      <p>
+          In this paper, we present the main ways of interaction with the developed web application solution, which can be found at <a href="#gat-heroku">this location</a>.
+      </p>
+    </section>
+
+    <section id="structure">
+        <h2>Page structure</h2>
+
+        <figure typeof="sa:image">
+            <img
+              src="images/structure.png"
+              alt="normal"
+              style="width: 100%"
+            />
+            <figcaption style="text-align: center">
+              Fig. 1 - Interaction page
+            </figcaption>
+        </figure>
+
+        <p>
+            The web application consists of a single page which contains the entirety of the functionality offered as well as the interactivity possible.
+            The structure of this single page consists of four text areas and four buttons (buttons that depend on each other to create a normal flow of interactivity).
+            The first two text areas in the upper section are the only two input fields: the first field, as its placeholder hints, is to receive a public GraphQL API URL which
+            should be explored by the application and the second field takes either a natural language question (written in English) related to the API's domain or it directly takes a query tailored
+            to that API. These last two cases denote the two main ways of interacting with the web application - use cases described in the section below.
+        </p>
+
+        <p>
+            As for the four buttons, they each need to be operated in a certain order, as hinted by their numbering, in order to to get a response for either of the two cases
+            presented above. The buttons work as follows:
+        </p>    
+
+        <ol id="button-descriptions">
+            <li>
+                <b>Prepare GraphQL schema</b>
+                <p>
+                    This is the only button available when starting the application. Its purpose is to send the GraphQL API URL and the question/query to the backend
+                    API, which is essentially the Semantic parser and Explorer module. With this information it can then send an introspection query to the GraphQL API
+                    and obtain a JSON response describing its internal schema.
+                </p>
+            </li>
+            <li>
+                <b>Display predicted query</b>
+                <p>
+                    After pressing this button, the user is required to wait for a response which is calculated as a prediction by the learning model. This prediction
+                    represents the model's guess at what the query equivalent of the natural language question should be, in raport to the GraphQL API schema obtained
+                    previously.
+                </p>
+            </li>
+            <li>
+                <b>Send query</b>
+                <p>
+                    As its name implies, this button sends the (predicted) query to the backend API which it will later use to make a request to the GraphQL API. 
+                </p>
+            </li>
+            <li>
+                <b>Display response</b>
+                <p>
+                    After sending the request with the previous button press, this button will display the GraphQL API's response to the user.
+                </p>
+            </li>
+        </ol>
+        
+        <p>
+            The two bottom text areas are both meant to be used for display purposes: the first one is meant to display the predicted query of the model in case of success or
+            an error otherwise, similarly the second one is meant to display the GraphQL API's response to the request sent or an error.
+        </p>
+
+    </section>
+
+    <section id="use-cases">
+        <h2>Use cases</h2>
+
+        <section id="normal-flow">
+            <h3>The normal flow</h3>
+
+            <figure typeof="sa:image">
+                <img
+                    src="images/normal.png"
+                    alt="normal"
+                    style="width: 100%"
+                />
+                <figcaption style="text-align: center">
+                    Fig. 2 - The basic use case
+                </figcaption>
+            </figure>
+
+            <p>
+                The main way of interacting with the application is to provide the public GraphQL API URL and a natural language question related to the API's domain in order for
+                the learning model to showcase its prediction capabilities.
+            </p>
+            <p>
+                After having input the data, the first button will also become disabled and after the "Predicted query" text area goes through the modes of "[Preparing...]" and
+                "[Prepared!]", the second button will become enabled.
+            </p>
+            <p>
+                After pressing the second button, the user is presented with a "[Loading...]" text in the "Predicted query" area and all buttons become disabled again to prevent
+                the user from interupting the model's calculations. This may take some time, but after that the text area will contain the model's prediction. This will also enable
+                the third button.
+            </p>
+            <p>
+                With this button available, the query can be prepared and sent in order to make the request to the GraphQL API. The "GraphQL response" text area will go through
+                a phase of "[Sending...]" and "[Sent!]" once its ready. After this, the fourth button becomes enabled and once it's pressed the API response can be displayed
+                in the text area.
+            </p>
+        </section>
+
+        <section id="alternative-flow">
+            <h3>The alternative flow</h3>
+
+            <figure typeof="sa:image">
+                <img
+                    src="images/alternative.png"
+                    alt="normal"
+                    style="width: 100%"
+                />
+                <figcaption style="text-align: center">
+                    Fig. 3 - The alternative use case
+                </figcaption>
+            </figure>
+
+            <p>
+                The alternative way of interaction with the application is to provide the public GraphQL API URL and a GraphQL query specific to that API in order to display
+                the response.
+            </p>
+            <p>
+                After having input the data, pressing the first button will result in it immediately becoming disabled and jumping to directly enabling the third button,
+                skipping the second one. This is happening since it is no longer needed for the model to make any calculations as the query is already present and ready
+                to be sent.
+            </p>
+            <p>
+                From here the flow carries on as in the use case above, the query being sent to the backend API after having pressed the third button thus enabling
+                the fourth button. Using this last button will make the GraphQL API response visible in the "GraphQL response" text area as can be seen in the figure
+                above.
+            </p>
+        </section>
+    </section>
+
+    <section id="references">
+        <h2>References</h2>
+        <ol>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://profs.info.uaic.ro/~busaco/teach/courses/wade/projects/index.html" id="gat">
+                <cite property="schema:name">
+                    <a href="https://profs.info.uaic.ro/~busaco/teach/courses/wade/projects/index.html">#WADe Project Proposals</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://wade-gat.herokuapp.com/" id="gat-heroku">
+                <cite property="schema:name">
+                    <a href="https://wade-gat.herokuapp.com/">#WADe Project Web App</a>
+                </cite>
+            </li>
+        </ol>
+    </section>
+
+  </body>
+</html>
