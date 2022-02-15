@@ -7,9 +7,17 @@ import copy
 
 # TODO: to be improved
 def convert(prediction):
-    parts = list(filter(None, re.split('|'.join(r'\b{}\b'.format(word) for word in ['SELECT', 'FROM', 'WHERE']), prediction)))
+    parts = list(
+        filter(None, re.split('|'.join(r'\b{}\b'.format(word) for word in ['SELECT', 'FROM', 'WHERE']), prediction)))
     parts = [part.strip() for part in parts]
-    fields, query_type, condition = parts
+
+    fields = ''
+    query_type = ''
+    condition = ''
+    if len(parts) == 3:
+        fields, query_type, condition = parts
+    else:
+        fields, query_type = parts
 
     condition_string = ''
     # Check whether WHERE clause is present
@@ -18,7 +26,6 @@ def convert(prediction):
         condition = condition.replace("'", '\"')
         condition_string = '(' + condition + ')'
 
-    
     return 'query { ' + query_type + condition_string + ' { ' + fields + ' } }'
 
 
@@ -27,21 +34,21 @@ def get_query_types_with_fields(query_types, name_to_type):
     for field in query_types:
         for key, value in name_to_type.items():
             if key.lower() == field['name'].lower() \
-                or key.lower() + 's' == field['name'].lower() \
-                or key.lower()[:-1] + 'ies' == field['name'].lower() \
-                or 'all' + key.lower() == field['name'].lower() \
-                or 'all' + key.lower() + 's' == field['name'].lower() \
-                or 'all' + key.lower()[:-1] + 'ies' == field['name'].lower() \
-                or 'get' + key.lower() == field['name'].lower() \
-                or 'get' + key.lower() + 's' == field['name'].lower() \
-                or 'get' + key.lower()[:-1] + 'ies' == field['name'].lower() \
-                or 'getfuzzy' + key.lower() == field['name'].lower() \
-                or 'getfuzzy' + key.lower() + 's' == field['name'].lower() \
-                or 'getfuzzy' + key.lower()[:-1] + 'ies' == field['name'].lower() \
-                or key.lower() in field['name'].lower():
-                    value_copy = copy.copy(value)
-                    value_copy['name'] = field['name']
-                    query_and_fields.append(value_copy)
+                    or key.lower() + 's' == field['name'].lower() \
+                    or key.lower()[:-1] + 'ies' == field['name'].lower() \
+                    or 'all' + key.lower() == field['name'].lower() \
+                    or 'all' + key.lower() + 's' == field['name'].lower() \
+                    or 'all' + key.lower()[:-1] + 'ies' == field['name'].lower() \
+                    or 'get' + key.lower() == field['name'].lower() \
+                    or 'get' + key.lower() + 's' == field['name'].lower() \
+                    or 'get' + key.lower()[:-1] + 'ies' == field['name'].lower() \
+                    or 'getfuzzy' + key.lower() == field['name'].lower() \
+                    or 'getfuzzy' + key.lower() + 's' == field['name'].lower() \
+                    or 'getfuzzy' + key.lower()[:-1] + 'ies' == field['name'].lower() \
+                    or key.lower() in field['name'].lower():
+                value_copy = copy.copy(value)
+                value_copy['name'] = field['name']
+                query_and_fields.append(value_copy)
 
     return query_and_fields
 
@@ -88,14 +95,14 @@ def save_simple_schema(schema_name):
             for arg in field['args']:
                 arguments.append(arg)
 
-    simpleSchema = {
+    simple_schema = {
         "types": remove_duplicates(list(query_types_with_fields)),
         "arguments": remove_duplicates(list(arguments))
     }
 
     os.makedirs(os.path.dirname(source + 'simpleSchema.json'), exist_ok=True)
     location = open(source + 'simpleSchema.json', 'w')
-    json.dump(simpleSchema, location, indent=4)
+    json.dump(simple_schema, location, indent=4)
     location.close()
 
 
@@ -196,7 +203,7 @@ def add_graphql_schema(graphql_api_url):
         }
     """
 
-    result = requests.post(graphql_api_url, json={ 'query': query })
+    result = requests.post(graphql_api_url, json={'query': query})
     json_result = json.loads(result.text)
     schema_name = get_schema_name(graphql_api_url)
     save_schema(schema_name, json_result)

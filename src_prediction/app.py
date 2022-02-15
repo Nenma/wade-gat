@@ -28,12 +28,12 @@ def send_question():
             util.add_graphql_schema(graphql_api_url)
 
         location = open('temp.json', 'w')
-        json.dump({ "question": question, "schema": schema_name }, location, indent=4)
+        json.dump({"question": question, "schema": schema_name}, location, indent=4)
         location.close()
 
         return 'Successfully sent!', 200
 
-    return { 'error': 'Request must be JSON' }, 415
+    return {'error': 'Request must be JSON'}, 415
 
 
 @app.get('/prediction')
@@ -59,12 +59,12 @@ def send_graphql_query():
         graphql_api_url = data['graphql_api_url']
 
         location = open('temp.json', 'w')
-        json.dump({ "query": query, "graphql_api_url": graphql_api_url }, location, indent=4)
+        json.dump({"query": query, "graphql_api_url": graphql_api_url}, location, indent=4)
         location.close()
 
         return 'Successfully sent!', 200
 
-    return { 'error': 'Request must be JSON' }, 415
+    return {'error': 'Request must be JSON'}, 415
 
 
 @app.get('/response')
@@ -73,7 +73,7 @@ def get_grahpql_response():
     query = temp['query']
     graphql_api_url = temp['graphql_api_url']
 
-    result = requests.post(graphql_api_url, json={ 'query': query })
+    result = requests.post(graphql_api_url, json={'query': query})
     json_result = json.loads(result.text)
 
     return json_result, 200
