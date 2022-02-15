@@ -8,3 +8,7 @@ Develop a Web tool (framework) using natural language constructs to interact to 
 
 Web Application Development course \
 Computational Linguistics Master, first year
+
+------------------
+
+Consult ```feat/new-backend``` branch for the final version of the application!
