@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -7,10 +8,14 @@
     <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
     <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
   </head>
+
   <body prefix="schema: http://schema.org">
+
     <header>
       <h1>GAT - Scholarly HTML Technical Report</h1>
+      <h2>Table of Contents</h2>
     </header>
+
     <div role="contentinfo">
       <dl>
         <dt>Authors</dt>
@@ -19,6 +24,7 @@
         </dd>
       </dl>
     </div>
+
     <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
       <h2>Abstract</h2>
       <p>
@@ -26,24 +32,26 @@
         the <a href="#gat">GAT Web application</a>.
       </p>
     </section>
+
     <section id="introduction" role="doc-introduction">
-      <h2>Introduction</h2>
-      <p>
-        GAT, or the <a href="#graphql">GraphQL API</a> Interactive Tool, is meant to be a tool that uses knowledge models to learn the proper concepts exposed by a public GraphQL API's schema (e.g. resources, their 
-        inputs and outputs) to facilitate a proper text- or voice-based interaction.
-      </p>
-      <p>
-        As a preliminary idea, the application will be divided in three main modules, following a service oriented architecture:
-        
+        <h2>Introduction</h2>
+        <p>
+            GAT, or the <a href="#graphql">GraphQL API</a> Interactive Tool, is meant to be a tool that uses knowledge models to learn the proper concepts exposed by a public GraphQL API's schema (e.g. resources, their 
+            inputs and outputs) to facilitate a proper text- or voice-based interaction.
+        </p>
+        <p>
+            As a preliminary idea, the application will be divided in three main modules, following a service oriented architecture:
+        </p>    
         <ul>
             <li>Web application UI</li>
             <li>NLP Module</li>
             <li>GraphQL API Explorer Module</li>
         </ul>
-
-        In the following sections, the basic structure and functionality of each of these modules will be described.
-      </p>
+        <p>
+            In the following sections, the basic structure and functionality of each of these modules will be described.
+        </p>
     </section>
+
     <section id="structure">
       <h2>Preliminary structure</h2>
       <p>
@@ -72,24 +80,24 @@
             <p>
                 The purpose of this module is to serve as part of the Question Answering System behind the tool's communication logic. As mentioned, a REST API ensures data transmission between user and
                 application. For this module, the REST API uses two endpoints:
-
-                <ul>
-                    <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitURL</pre></figure></li>
-                    <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitQuestion</pre></figure></li>
-                </ul>
-
+            </p>
+            <ul>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitURL</pre></figure></li>
+                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /submitQuestion</pre></figure></li>
+            </ul>
+            <p>
                 The first endpoint is only meant to be used to receive the URL that was sent in the input field of the home page and later send it to the Explorer module, while the second endpoint
                 is exclusively used for user communication. The body of this request carries the user question and as its response it will bring an answer back to the user.
             </p>
             <p>
                 <a href="#qas">Question Answering Systems</a> (QAS) try to find answers to natural language questions submitted by users, by looking for answers on a set of available information
                 sources, which can be spread on a single machine or all over the Internet. Broadly speaking, QAS have two major components:
-
-                <ol>
-                    <li>A search engine which retrieves a set of promising documents from the collection along with a brief description of relevant passages called snippets.</li>
-                    <li>An answer extraction module which gets answers from relevant documents and/or snippets.</li>
-                </ol>
-
+            </p>
+            <ol>
+                <li>A search engine which retrieves a set of promising documents from the collection along with a brief description of relevant passages called snippets.</li>
+                <li>An answer extraction module which gets answers from relevant documents and/or snippets.</li>
+            </ol>
+            <p>
                 In our case, the first component is represented by the Explorer module, while the second component is represented by this one.
             </p>
             <p>
@@ -125,6 +133,7 @@
             </p>
         </section>
     </section>
+
     <section id="project-progress">
         <h2>Project progress</h2>
         <p>
@@ -147,9 +156,6 @@
                         text input fields and some areas for displaying the results. As originally designed, the communication between the UI and the NLP module is carried out using a REST API.
                     </p>
                 </li>
-                <!-- <li id="backend"> 
-                    <h4>Backend</h4>
-                </li> -->
                 <li id="nlp-explorer">
                     <h4>Semantic parser and API explorer</h4>
                     <p>
@@ -183,13 +189,14 @@
                     <ul>
                         <li>Frontend: HTML, CSS, JavaScript</li>
                         <li>Semantic parser and GraphQL API explorer: Python</li>
+                        <li>Deployment: Heroku</li>
                         <li>OpenAPI: Swagger</li>
                     </ul>
                 </li>
                 <li> User requirements:
                     <ul>
                         <li>The user is able to enter a public GraphQL API URL along with a natural language question written in English and receive the GraphQL response to that question</li>
-                        <li>The user is able to enter a public GraphQL API URL along with a query for that GraphQL schema and receive the GraphQL response</li>
+                        <li>The user is also able to enter a public GraphQL API URL along with a query for that GraphQL schema and receive the GraphQL response</li>
                     </ul>
                 </li>
                 <li> Application requirements:
@@ -206,25 +213,29 @@
             <h2>Outcome</h2>
             <p>
                 The current application is able to read the input from the user, process it and return relevant results. 
+                The developed Web application solution can be found at <a href="#gat-heroku">this location</a>.
             </p>
         </section>
     </section>
+
     <section id="api">
         <h2>Technical aspects concerning the implemented API</h2>
         <p>
             The data transmission between user and application is ensured by a REST API. This REST API uses four endpoints:
-            <ul>
-                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /question</pre></figure></li>
-                <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /prediction</pre></figure></li>
-                <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /predictedQuery</pre></figure></li>
-                <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /response</pre></figure></li>
-            </ul>
-
+        </p>
+        <ul>
+            <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /question</pre></figure></li>
+            <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /prediction</pre></figure></li>
+            <li><figure typeof="schema:SoftwareSourceCode"><pre>POST /predictedQuery</pre></figure></li>
+            <li><figure typeof="schema:SoftwareSourceCode"><pre>GET /response</pre></figure></li>
+        </ul>
+        <p>
             The first endpoint is meant to receive the public GraphQL API URL along with the natural language question that were written in the input field of the interaction page and send them to the Semantic parser component.
             The second endpoint is used for sending the predicted GraphQL query to the UI. The third endpoint is meant to receive the predicted query by the Semantic parser and send it to the Explorer component.
             And the fourth endpoint is used to get the answer to the query from the Explorer and send it to the UI. 
         </p>
     </section>
+
     <section id="conclusion">
       <h2>Conclusion</h2>
       <p>
@@ -235,6 +246,7 @@
           is done through the internal REST APIs via GET requests, only on of which returns response data that more than conforms to these principles.
       </p>
     </section>
+
     <section id="references">
         <h2>References</h2>
         <ol>
@@ -273,9 +285,14 @@
                     <a href="https://graphql.org/learn/introspection/">GraphQL Introspection</a>
                 </cite>
             </li>
-            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://blog.lambdo.com/spegql-openai-scholars-final-project/" id="#parser-proj">
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://blog.lambdo.com/spegql-openai-scholars-final-project/" id="parser-proj">
                 <cite property="schema:name">
                     <a href="https://blog.lambdo.com/spegql-openai-scholars-final-project/">Semantic Parsing English to GraphQL Project</a>
+                </cite>
+            </li>
+            <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://wade-gat.herokuapp.com/" id="gat-heroku">
+                <cite property="schema:name">
+                    <a href="https://wade-gat.herokuapp.com/">Deployed Web application</a>
                 </cite>
             </li>
             <li typeof="schema:WebPage" role="doc-biblioentry" resource="https://www.w3.org/wiki/LinkedData" id="linked-data">
@@ -285,5 +302,6 @@
             </li>
         </ol>
     </section>
+
   </body>
 </html>
