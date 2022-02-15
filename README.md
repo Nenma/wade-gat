@@ -8,3 +8,17 @@ Develop a Web tool (framework) using natural language constructs to interact to 
 
 Web Application Development course \
 Computational Linguistics Master, first year
+
+------------------
+
+**Video presentation of the Web application:** https://youtu.be/PJzXpU0P6K8
+
+**Setup and run:**
+
+Clone ```feat/new-backend``` branch of this repository
+
+Change directory: ```cd ./src_prediction```
+
+Run: ```flask run```
+
+Open https://wade-gat.herokuapp.com in browser 
